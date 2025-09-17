@@ -8,38 +8,82 @@ export function TeamSection() {
     {
       name: "Nikolas Doan",
       nameInChinese: "段皇方",
-      position: "Co-founder & CEO",
+      position: "CEO",
       image: "/avatars/nikolas_avatar.jpeg",
-      languages: ["English", "Chinese", "Vietnamese"],
-      expertise: ["Digital Strategy", "Market Research", "International Cooperation"],
+      regions: ["Taiwan", "Vietnam", "USA"],
       email: "niko.tecx@gmail.com",
     },
     {
       name: "Brian Nguyen",
       nameInChinese: "阮文貴",
-      position: "Founder & CTO",
+      position: "CTO",
       image: "/avatars/brian_avatar.png",
-      languages: ["English", "Chinese", "Vietnamese"],
-      expertise: ["Website Development", "Application Development", "Digital Solutions"],
+      regions: ["Taiwan", "Vietnam", "China"],
       email: "brian.tecx@gmail.com",
     },
     {
       name: "Jane Liu",
       nameInChinese: "劉美玲",
-      position: "Head of Design",
+      position: "Chief Designer",
       image: "/avatars/jane_avatar.jpeg",
-      languages: ["English", "Chinese", "Cantonese"],
-      expertise: ["UI/UX Design", "Brand Identity", "Visual Communication"],
+      regions: ["Taiwan"],
       email: "jane.tecx@gmail.com",
     },
     {
-      name: "Edgar Edffedi",
-      nameInChinese: "艾德加",
-      position: "Head of Media",
+      name: "Ellis Wu",
+      nameInChinese: "吳賢政",
+      position: "Chief Business Developer",
+      image: "/avatars/ellis_avatar.jpeg",
+      regions: ["Taiwan"],
+      email: "",
+    },
+    {
+      name: "Edgar Effendi",
+      nameInChinese: "",
+      position: "System Architect",
       image: "/avatars/edgar_avatar.jpeg",
-      languages: ["English", "French", "Spanish"],
-      expertise: ["Content Strategy", "Digital Marketing", "Media Production"],
-      email: "edgar.tecx@gmail.com",
+      regions: ["Taiwan", "Indonesia"],
+      email: "",
+    },
+    {
+      name: "Linh Linh",
+      nameInChinese: "",
+      position: "UI/UX Designer",
+      image: "/avatars/tecxmate-logo-light.png",
+      regions: ["Vietnam"],
+      email: "",
+    },
+    {
+      name: "BAVO",
+      nameInChinese: "",
+      position: "Mobile Developer",
+      image: "/avatars/tecxmate-logo-light.png",
+      regions: ["Vietnam"],
+      email: "",
+    },
+    {
+      name: "QUYEN",
+      nameInChinese: "",
+      position: "Mobile Developer",
+      image: "/avatars/tecxmate-logo-light.png",
+      regions: ["Vietnam"],
+      email: "",
+    },
+    {
+      name: "DDH",
+      nameInChinese: "",
+      position: "Web Developer",
+      image: "/avatars/tecxmate-logo-light.png",
+      regions: ["Vietnam"],
+      email: "",
+    },
+    {
+      name: "PHUC",
+      nameInChinese: "",
+      position: "Web Developer",
+      image: "/avatars/tecxmate-logo-light.png",
+      regions: ["Vietnam"],
+      email: "",
     },
   ]
 
@@ -59,16 +103,18 @@ export function TeamSection() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="overflow-hidden border-none shadow-md transition-all hover:shadow-lg">
+        <div className="mt-16 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-6 pb-4">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="flex-shrink-0 w-72"
+              >
+                <Card className="overflow-hidden border-none shadow-md transition-all hover:shadow-lg h-full">
                 <CardContent className="p-0">
                   <div className="relative">
                     <img
@@ -88,22 +134,11 @@ export function TeamSection() {
                     <p className="mt-1 text-sm font-medium text-primary">{member.position}</p>
 
                     <div className="mt-3">
-                      <p className="text-xs font-medium uppercase text-gray-500">Languages</p>
+                      <p className="text-xs font-medium uppercase text-gray-500">Regions</p>
                       <div className="mt-1 flex flex-wrap justify-center gap-1">
-                        {member.languages.map((language, i) => (
+                        {(member as any).regions?.map((region: string, i: number) => (
                           <span key={i} className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">
-                            {language}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="mt-3">
-                      <p className="text-xs font-medium uppercase text-gray-500">Expertise</p>
-                      <div className="mt-1 flex flex-wrap justify-center gap-1">
-                        {member.expertise.map((skill, i) => (
-                          <span key={i} className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">
-                            {skill}
+                            {region}
                           </span>
                         ))}
                       </div>
@@ -111,9 +146,14 @@ export function TeamSection() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
+        <style jsx global>{`
+          .scrollbar-hide::-webkit-scrollbar { display: none; }
+          .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        `}</style>
       </div>
     </section>
   )
