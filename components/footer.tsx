@@ -3,7 +3,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-[#F6F3F1] py-12 md:py-16">
+    <footer className="bg-[#F6F3F1] pt-12 md:pt-16 pb-6 snap-end">
       <div className="container px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
@@ -120,7 +120,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-200 pt-6 text-center text-sm text-gray-500">
+        <div className="mt-8 md:mt-10 border-t border-gray-200 pt-4 text-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} Tecxmate. All rights reserved.</p>
         </div>
       </div>

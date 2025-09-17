@@ -144,10 +144,10 @@ export function ServicesSection() {
   }
 
   return (
-    <section id="services" className="bg-[#F6F3F1] py-20">
+    <section id="services" className="bg-[#F6F3F1] py-16 md:py-20 snap-start">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Services</h2>
+          <h2 className="text-3xl font-mono font-bold tracking-tighter sm:text-4xl md:text-5xl">Services</h2>
         </div>
 
         <div className="relative mt-16">
@@ -205,14 +205,7 @@ export function ServicesSection() {
                     background: cardGradient,
                     boxShadow: "0 -8px 24px -8px rgba(0,0,0,0.10)",
                   }}
-                  whileHover={{
-                    scale: 1.03,
-                    boxShadow: "0 -12px 32px -12px rgba(0,0,0,0.12)",
-                  }}
-                  whileTap={{
-                    scale: 1.03,
-                    boxShadow: "0 -12px 32px -12px rgba(0,0,0,0.14)",
-                  }}
+                  // hover/tap animations removed per request
                 >
                   {/* Card image background */}
                   <img
@@ -227,19 +220,7 @@ export function ServicesSection() {
                     <div>
                       <h3 className="text-2xl font-bold text-white drop-shadow-lg mb-2">{service.title}</h3>
                     </div>
-                    <div className="flex justify-end items-end w-full mt-auto">
-                      <button
-                        className="flex items-center justify-center w-12 h-12 rounded-full bg-white/90 shadow-lg hover:bg-gray-100 transition-colors text-2xl font-bold text-gray-900"
-                        style={{position: 'absolute', bottom: '24px', right: '24px'}}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleServiceClick(service.id);
-                        }}
-                        aria-label={service.isSpecial ? 'Book a Call' : 'Get Started'}
-                      >
-                        +
-                      </button>
-                    </div>
+                    {/* CTA button with plus sign removed per request */}
                   </div>
                 </motion.div>
               );

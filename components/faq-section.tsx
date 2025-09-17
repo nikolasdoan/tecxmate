@@ -38,7 +38,7 @@ export function FaqSection() {
   ]
 
   return (
-    <section id="faq" className="bg-[#F6F3F1] py-20">
+    <section id="faq" className="bg-[#F6F3F1] py-16 md:py-20 snap-start">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center"
@@ -47,7 +47,7 @@ export function FaqSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">FAQs</h2>
+          <h2 className="text-3xl font-mono font-bold tracking-tighter sm:text-4xl md:text-5xl">FAQs</h2>
         </motion.div>
 
         <div className="mx-auto mt-12 max-w-3xl">

@@ -88,7 +88,7 @@ export function TeamSection() {
   ]
 
   return (
-    <section id="team" className="bg-[#F6F3F1] py-20">
+    <section id="team" className="bg-[#F6F3F1] py-20 snap-start">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center"
@@ -97,7 +97,7 @@ export function TeamSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Meet Our Experts</h2>
+          <h2 className="text-3xl font-mono font-bold tracking-tighter sm:text-4xl md:text-5xl">Meet Our Experts</h2>
           
         </motion.div>
 
@@ -132,8 +132,7 @@ export function TeamSection() {
                     <p className="mt-1 text-sm font-medium text-primary">{member.position}</p>
 
                     <div className="mt-3">
-                      <p className="text-xs font-medium uppercase text-gray-500">Regions</p>
-                      <div className="mt-1 flex flex-wrap justify-center gap-1">
+                      <div className="flex flex-wrap justify-center gap-1">
                         {(member as any).regions?.map((region: string, i: number) => (
                           <span key={i} className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600">
                             {region}
