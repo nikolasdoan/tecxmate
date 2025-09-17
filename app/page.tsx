@@ -21,7 +21,7 @@ export default function Home() {
         <PulsingCircle />
       </ShaderBackground>
       {/* Trusted by clients slider */}
-      <section className="snap-start bg-white py-10">
+      <section className="snap-start bg-white py-6 md:py-8">
         <div className="container px-4 md:px-6">
           <p className="mb-4 text-center text-xs md:text-sm font-mono font-semibold text-black/70">
             with clients from

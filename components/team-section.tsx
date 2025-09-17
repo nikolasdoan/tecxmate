@@ -101,7 +101,7 @@ export function TeamSection() {
           
         </motion.div>
 
-        <div className="mt-16 overflow-x-auto scrollbar-hide">
+        <div className="mt-16 overflow-x-auto overflow-y-hidden scrollbar-hide">
           <div className="flex gap-6 pb-4">
             {teamMembers.map((member, index) => (
               <motion.div
