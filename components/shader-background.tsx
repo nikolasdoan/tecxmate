@@ -2,7 +2,11 @@
 
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
-import { MeshGradient } from "@paper-design/shaders-react"
+import dynamic from "next/dynamic"
+
+const MeshGradient = dynamic(() => import("@paper-design/shaders-react").then(m => m.MeshGradient), {
+  ssr: false,
+})
 
 interface ShaderBackgroundProps {
   children: React.ReactNode
@@ -11,8 +15,10 @@ interface ShaderBackgroundProps {
 export default function ShaderBackground({ children }: ShaderBackgroundProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isActive, setIsActive] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleMouseEnter = () => setIsActive(true)
     const handleMouseLeave = () => setIsActive(false)
 
@@ -30,8 +36,10 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
     }
   }, [])
 
+  if (!mounted) return null
+
   return (
-    <div id="hero" ref={containerRef} className="min-h-screen bg-white relative overflow-hidden pt-20">
+    <div id="hero" ref={containerRef} className="min-h-[80vh] bg-white relative overflow-hidden pt-20 snap-start">
       <svg className="absolute inset-0 w-0 h-0">
         <defs>
           <filter id="glass-effect" x="-50%" y="-50%" width="200%" height="200%">

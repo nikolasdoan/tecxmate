@@ -1,9 +1,16 @@
 "use client"
 
-import { PulsingBorder } from "@paper-design/shaders-react"
+import dynamic from "next/dynamic"
+import { useEffect, useState } from "react"
+const PulsingBorder = dynamic(() => import("@paper-design/shaders-react").then(m => m.PulsingBorder), {
+  ssr: false,
+})
 import { motion } from "framer-motion"
 
 export default function PulsingCircle() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  if (!mounted) return null
   return (
     <div className="absolute bottom-8 right-8 z-30">
       <div className="relative w-20 h-20 flex items-center justify-center">
