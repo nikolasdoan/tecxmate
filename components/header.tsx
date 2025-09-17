@@ -14,22 +14,34 @@ export default function Header() {
 
       <nav className="flex items-center space-x-2">
         <Link
-          href="/services"
+          href="/"
+          className="text-white/80 hover:text-white text-xs font-light px-3 py-2 rounded-full hover:bg-black/30 transition-all duration-200"
+        >
+          Home
+        </Link>
+        <Link
+          href="/#services"
           className="text-white/80 hover:text-white text-xs font-light px-3 py-2 rounded-full hover:bg-black/30 transition-all duration-200"
         >
           Services
         </Link>
         <Link
-          href="/projects"
+          href="/#portfolio"
           className="text-white/80 hover:text-white text-xs font-light px-3 py-2 rounded-full hover:bg-black/30 transition-all duration-200"
         >
-          Projects
+          Products
         </Link>
         <Link
-          href="/team"
+          href="/#team"
           className="text-white/80 hover:text-white text-xs font-light px-3 py-2 rounded-full hover:bg-black/30 transition-all duration-200"
         >
           Team
+        </Link>
+        <Link
+          href="/blog"
+          className="text-white/80 hover:text-white text-xs font-light px-3 py-2 rounded-full hover:bg-black/30 transition-all duration-200"
+        >
+          Blog
         </Link>
         <Link
           href="/contact"
