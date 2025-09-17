@@ -98,9 +98,7 @@ export function TeamSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Meet Our Experts</h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            The talented professionals behind our exceptional work
-          </p>
+          
         </motion.div>
 
         <div className="mt-16 overflow-x-auto scrollbar-hide">

@@ -148,9 +148,6 @@ export function ServicesSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Services</h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            Premium digital solutions tailored to your vision and business goals
-          </p>
         </div>
 
         <div className="relative mt-16">
@@ -224,8 +221,7 @@ export function ServicesSection() {
                     className="absolute inset-0 h-full w-full object-cover z-0"
                     style={{borderRadius: '1.5rem'}}
                   />
-                  {/* Optional dark overlay for text readability */}
-                  <div className="absolute inset-0 z-10" style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.0) 100%)', borderRadius: '1.5rem'}} />
+                  {/* Overlay removed per request: no dark tint over cards */}
                   {/* Card content */}
                   <div className="relative z-20 flex flex-col justify-between h-full w-full p-8">
                     <div>

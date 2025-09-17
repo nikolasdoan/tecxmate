@@ -47,10 +47,7 @@ export function FaqSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
-            Find answers to common questions about our services and process
-          </p>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">FAQs</h2>
         </motion.div>
 
         <div className="mx-auto mt-12 max-w-3xl">
