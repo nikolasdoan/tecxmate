@@ -1,5 +1,8 @@
 import { Navbar } from "@/components/navbar"
-import { HeroSection } from "@/components/hero-section"
+import ShaderBackground from "@/components/shader-background"
+import Header from "@/components/header"
+import HeroContent from "@/components/hero-content"
+import PulsingCircle from "@/components/pulsing-circle"
 import { ServicesSection } from "@/components/services-section"
 import { ProcessSection } from "@/components/process-section"
 import { TeamSection } from "@/components/team-section"
@@ -11,9 +14,13 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F6F3F1]">
+    <main className="min-h-screen">
       <Navbar />
-      <HeroSection />
+      <ShaderBackground>
+        <Header />
+        <HeroContent />
+        <PulsingCircle />
+      </ShaderBackground>
       <ServicesSection />
       <DemoProductsSection />
       <TeamSection />
