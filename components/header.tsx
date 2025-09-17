@@ -99,13 +99,13 @@ export default function Header() {
     : "bg-transparent"
 
   const linkClasses = forceTransparent
-    ? "text-white/80 hover:text-white"
+    ? "text-black/80 hover:text-black"
     : isLightBehind
     ? "text-black/80 hover:text-black"
     : "text-white/80 hover:text-white"
 
   const ctaClasses = forceTransparent
-    ? "bg-white text-black hover:bg-white/90"
+    ? "bg-black text-white hover:bg-black/90"
     : isLightBehind
     ? "bg-black text-white hover:bg-black/90"
     : "bg-white text-black hover:bg-white/90"
@@ -113,7 +113,7 @@ export default function Header() {
   return (
     <header id="site-header" className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between p-4 transition-colors duration-300 ${containerClasses}`}>
       <div className="flex items-center">
-        <Link href="/" className={`font-semibold text-lg tracking-tight ${forceTransparent ? "text-white" : isLightBehind ? "text-black" : "text-white"}`}>
+        <Link href="/" className={`font-semibold text-lg md:text-xl tracking-tight ${forceTransparent ? "text-black" : isLightBehind ? "text-black" : "text-white"}`}>
           <span className="font-light">tecx</span>
           <span className="font-bold">mate</span>
         </Link>
@@ -122,49 +122,49 @@ export default function Header() {
       <nav className="flex items-center space-x-2">
         <Link
           href="/"
-          className={`${linkClasses} text-xs font-light px-3 py-1.5 rounded-full transition-all duration-200`}
+          className={`${linkClasses} text-sm font-light px-3 py-1.5 rounded-full transition-all duration-200`}
         >
           Home
         </Link>
         <Link
           href="/#services"
-          className={`${linkClasses} text-xs font-light px-3 py-1.5 rounded-full transition-all duration-200`}
+          className={`${linkClasses} text-sm font-light px-3 py-1.5 rounded-full transition-all duration-200`}
         >
           Services
         </Link>
         <Link
           href="/#portfolio"
-          className={`${linkClasses} text-xs font-light px-3 py-1.5 rounded-full transition-all duration-200`}
+          className={`${linkClasses} text-sm font-light px-3 py-1.5 rounded-full transition-all duration-200`}
         >
           Products
         </Link>
         <Link
           href="/#team"
-          className={`${linkClasses} text-xs font-light px-3 py-1.5 rounded-full transition-all duration-200`}
+          className={`${linkClasses} text-sm font-light px-3 py-1.5 rounded-full transition-all duration-200`}
         >
           Team
         </Link>
         <Link
           href="/blog"
-          className={`${linkClasses} text-xs font-light px-3 py-1.5 rounded-full transition-all duration-200`}
+          className={`${linkClasses} text-sm font-light px-3 py-1.5 rounded-full transition-all duration-200`}
         >
           Blog
         </Link>
         <Link
           href="/contact"
-          className={`${linkClasses} text-xs font-light px-3 py-1.5 rounded-full transition-all duration-200`}
+          className={`${linkClasses} text-sm font-light px-3 py-1.5 rounded-full transition-all duration-200`}
         >
           Contact
         </Link>
       </nav>
 
       <div id="gooey-btn" className="relative flex items-center group" style={{ filter: "url(#gooey-filter)" }}>
-        <button className={`absolute right-0 px-2 py-1.5 rounded-full font-normal text-[11px] transition-all duration-300 cursor-pointer h-[28px] flex items-center justify-center -translate-x-9 group-hover:-translate-x-16 z-0 ${ctaClasses}`}>
+        <button className={`absolute right-0 px-2 py-1.5 rounded-full font-normal text-xs transition-all duration-300 cursor-pointer h-8 flex items-center justify-center -translate-x-9 group-hover:-translate-x-16 z-0 ${ctaClasses}`}>
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
           </svg>
         </button>
-        <button className={`px-5 py-1.5 rounded-full font-normal text-xs transition-all duration-300 cursor-pointer h-[28px] flex items-center z-10 ${ctaClasses}`}>
+        <button className={`px-5 py-1.5 rounded-full font-normal text-xs transition-all duration-300 cursor-pointer h-8 flex items-center z-10 ${ctaClasses}`}>
           Get Started
         </button>
       </div>

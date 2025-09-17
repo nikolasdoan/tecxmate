@@ -31,7 +31,7 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
   }, [])
 
   return (
-    <div id="hero" ref={containerRef} className="min-h-screen bg-black relative overflow-hidden pt-20">
+    <div id="hero" ref={containerRef} className="min-h-screen bg-white relative overflow-hidden pt-20">
       <svg className="absolute inset-0 w-0 h-0">
         <defs>
           <filter id="glass-effect" x="-50%" y="-50%" width="200%" height="200%">
@@ -61,13 +61,13 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
 
       <MeshGradient
         className="absolute inset-0 w-full h-full"
-        colors={["#000000", "#8b5cf6", "#ffffff", "#1e1b4b", "#4c1d95"]}
+        colors={["#ffffff", "#e9d5ff", "#dbeafe", "#fde68a", "#f3e8ff"]}
         speed={0.3}
-        backgroundColor="#000000"
+        backgroundColor="#ffffff"
       />
       <MeshGradient
         className="absolute inset-0 w-full h-full opacity-60"
-        colors={["#000000", "#ffffff", "#8b5cf6", "#000000"]}
+        colors={["#ffffff", "#e9d5ff", "#c4b5fd", "#ffffff"]}
         speed={0.2}
         wireframe={true}
         backgroundColor="transparent"
