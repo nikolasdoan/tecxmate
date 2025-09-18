@@ -43,7 +43,7 @@ export function BusinessModelSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Our Approach</div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Business Model</h2>
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">Business Model</h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
             How we create and deliver value to our clients
           </p>

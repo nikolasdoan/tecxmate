@@ -30,7 +30,7 @@ export function ValuesSection() {
     <section className="bg-[#F6F3F1] py-20">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Values</h2>
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">Our Values</h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
             Cost effective, fast delivery, innovative solutions for founders and small businesses.
           </p>

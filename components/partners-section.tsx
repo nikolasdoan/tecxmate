@@ -43,7 +43,7 @@ export function PartnersSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Our Partners</div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Trusted by Industry Leaders</h2>
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">Trusted by Industry Leaders</h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
             We collaborate with leading companies across various industries
           </p>
