@@ -88,7 +88,7 @@ export function TeamSection() {
   ]
 
   return (
-    <section id="team" className="bg-[#F6F3F1] py-20 snap-start">
+    <section id="team" className="bg-[#F6F3F1] py-20 snap-start border-t border-b border-[rgba(55,50,47,0.12)]">
       <div className="container px-4 md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center"
@@ -97,7 +97,7 @@ export function TeamSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-mono font-bold tracking-tighter sm:text-4xl md:text-5xl">Meet Our Experts</h2>
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">Meet Our Experts</h2>
           
         </motion.div>
 

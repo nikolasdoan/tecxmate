@@ -7,6 +7,7 @@ import { ComprehensiveOnboardingForm } from "@/components/comprehensive-onboardi
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Spotlight } from "@/components/spotlight"
 import { TextRotate, type TextRotateRef } from "@/components/text-rotate"
+import { AnimatedDiagonalBackground } from "@/components/animated-diagonal-background"
 import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
@@ -21,8 +22,15 @@ export function HeroSection() {
         {/* Spotlight effect */}
         <Spotlight className="opacity-100" size={800} />
 
+        {/* Animated diagonal background */}
+        <AnimatedDiagonalBackground 
+          className="z-0 opacity-30" 
+          lineCount={200}
+          color="rgba(133, 82, 255, 0.08)"
+        />
+
         {/* Subtle grid pattern */}
-        <div className="absolute inset-0 z-0 opacity-30">
+        <div className="absolute inset-0 z-0 opacity-20">
           <svg
             className="absolute inset-0 h-full w-full"
             xmlns="http://www.w3.org/2000/svg"

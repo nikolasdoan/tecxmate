@@ -38,10 +38,10 @@ export function ProcessSection() {
   ]
 
   return (
-    <section id="process" className="bg-[#F6F3F1] py-20">
+    <section id="process" className="bg-[#F6F3F1] py-20 border-t border-b border-[rgba(55,50,47,0.12)]">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">How We Work</h2>
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">How We Work</h2>
           <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
             Our streamlined process ensures efficient delivery of high-quality results
           </p>
@@ -63,8 +63,8 @@ export function ProcessSection() {
                     {step.icon}
                   </motion.div>
                 </div>
-                <h3 className="mb-2 text-xl font-bold">{step.title}</h3>
-                <p className="text-gray-500">{step.description}</p>
+                <h3 className="mb-2 text-2xl font-bold tracking-tight">{step.title}</h3>
+                <p className="text-gray-500 text-lg">{step.description}</p>
               </div>
             ))}
           </div>
@@ -85,8 +85,8 @@ export function ProcessSection() {
                       {step.icon}
                     </motion.div>
                   </div>
-                  <h3 className="mb-2 text-xl font-bold">{step.title}</h3>
-                  <p className="text-gray-500">{step.description}</p>
+                  <h3 className="mb-2 text-2xl font-bold tracking-tight">{step.title}</h3>
+                  <p className="text-gray-500 text-lg">{step.description}</p>
                 </div>
               ))}
             </div>

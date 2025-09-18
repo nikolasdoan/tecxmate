@@ -58,7 +58,13 @@ export function ContactForm() {
   }
 
   return (
-    <div className="rounded-lg bg-white p-6 shadow-lg sm:p-8">
+    <div className="rounded-lg bg-white p-6 shadow-lg sm:p-8 border border-[#e0dedb] shadow-sm">
+      {/* Decorative lines */}
+      <div className="space-y-1 mb-6">
+        <div className="w-full h-0.5 bg-[#322d2b]/8"></div>
+        <div className="w-32 h-0.5 bg-[#322d2b]"></div>
+      </div>
+      
       {formStatus === "success" && (
         <Alert className="mb-6 border-green-200 bg-green-50 text-green-800">
           <CheckCircle className="h-4 w-4" />

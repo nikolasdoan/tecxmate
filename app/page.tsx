@@ -3,7 +3,7 @@ import Header from "@/components/header"
 import HeroContent from "@/components/hero-content"
 import PulsingCircle from "@/components/pulsing-circle"
 import { InfiniteSlider } from "@/components/ui/infinite-slider"
-import { ServicesSection } from "@/components/services-section"
+import { BentoServicesSection } from "@/components/bento-services-section"
 import { ProcessSection } from "@/components/process-section"
 import { TeamSection } from "@/components/team-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
@@ -37,7 +37,7 @@ export default function Home() {
           </InfiniteSlider>
         </div>
       </section>
-      <ServicesSection />
+      <BentoServicesSection />
       <DemoProductsSection />
       <TeamSection />
       <TestimonialsSection />

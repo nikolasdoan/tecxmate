@@ -144,7 +144,7 @@ export function ServicesSection() {
   }
 
   return (
-    <section id="services" className="bg-[#F6F3F1] py-16 md:py-20 snap-start">
+    <section id="services" className="bg-[#F6F3F1] py-16 md:py-20 snap-start border-t border-b border-[rgba(55,50,47,0.12)]">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="text-3xl font-mono font-bold tracking-tighter sm:text-4xl md:text-5xl">Services</h2>
@@ -193,7 +193,7 @@ export function ServicesSection() {
               return (
                 <motion.div
                   key={service.id}
-                  className="relative flex-shrink-0 overflow-hidden rounded-3xl transition-all duration-300"
+                  className="relative flex-shrink-0 overflow-hidden rounded-3xl transition-all duration-300 border border-[#e0dedb] shadow-sm"
                   style={{
                     width: isMobile ? "85vw" : "350px",
                     height: "500px",
@@ -215,6 +215,14 @@ export function ServicesSection() {
                     style={{borderRadius: '1.5rem'}}
                   />
                   {/* Overlay removed per request: no dark tint over cards */}
+                  {/* Decorative lines for special cards */}
+                  {service.isSpecial && (
+                    <div className="absolute top-6 left-6 right-6 z-10 space-y-1">
+                      <div className="w-full h-0.5 bg-white/20"></div>
+                      <div className="w-32 h-0.5 bg-white/60"></div>
+                    </div>
+                  )}
+                  
                   {/* Card content */}
                   <div className="relative z-20 flex flex-col justify-between h-full w-full p-8">
                     <div>

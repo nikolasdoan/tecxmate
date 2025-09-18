@@ -17,6 +17,9 @@ importers:
       '@notionhq/client':
         specifier: latest
         version: 5.1.0
+      '@paper-design/shaders-react':
+        specifier: ^0.0.52
+        version: 0.0.52(@types/react@19.1.13)(react@19.1.1)
       '@radix-ui/react-accordion':
         specifier: 1.2.2
         version: 1.2.2(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -155,6 +158,9 @@ importers:
       react-resizable-panels:
         specifier: ^2.1.7
         version: 2.1.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      react-use-measure:
+        specifier: ^2.1.7
+        version: 2.1.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       recharts:
         specifier: 2.15.0
         version: 2.15.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -420,6 +426,18 @@ packages:
   '@notionhq/client@5.1.0':
     resolution: {integrity: sha512-YYVjXYk1XwKQ4XIh+iGjaaXOGHxaDgB3UaGnDMyrZ3X9UiYQsZpzPIvTuhvp97os8a5W5kTQFsyq77+I+COOVQ==}
     engines: {node: '>=18'}
+
+  '@paper-design/shaders-react@0.0.52':
+    resolution: {integrity: sha512-C+9RzOeubBwsGxPZpouf5tFgLfRN38+7TYxg6oMW15OendqFraZn1/YIVWLRjgQVfuv2AkJjZelzCcHfq7uk/w==}
+    peerDependencies:
+      '@types/react': ^18 || ^19
+      react: ^18 || ^19
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
+  '@paper-design/shaders@0.0.52':
+    resolution: {integrity: sha512-it+wjb8QQpKCVH0UvzuqY7MYL6Hcqvu1xN9akMt8hGHlW5W2LkC4Ljpwcp3mrlx3oKuex+O3WUhzNtu6ONpvIQ==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -2164,6 +2182,15 @@ packages:
       react: '>=16.6.0'
       react-dom: '>=16.6.0'
 
+  react-use-measure@2.1.7:
+    resolution: {integrity: sha512-KrvcAo13I/60HpwGO5jpW7E9DfusKyLPLvuHlUyP5zqnmAPhNc6qTRjUQrdTADl0lpPpDVU2/Gg51UlOGHXbdg==}
+    peerDependencies:
+      react: '>=16.13'
+      react-dom: '>=16.13'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+
   react@19.1.1:
     resolution: {integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==}
     engines: {node: '>=0.10.0'}
@@ -2620,6 +2647,15 @@ snapshots:
       fastq: 1.19.1
 
   '@notionhq/client@5.1.0': {}
+
+  '@paper-design/shaders-react@0.0.52(@types/react@19.1.13)(react@19.1.1)':
+    dependencies:
+      '@paper-design/shaders': 0.0.52
+      react: 19.1.1
+    optionalDependencies:
+      '@types/react': 19.1.13
+
+  '@paper-design/shaders@0.0.52': {}
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -4463,6 +4499,12 @@ snapshots:
       loose-envify: 1.4.0
       prop-types: 15.8.1
       react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
+  react-use-measure@2.1.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+    dependencies:
+      react: 19.1.1
+    optionalDependencies:
       react-dom: 19.1.1(react@19.1.1)
 
   react@19.1.1: {}
