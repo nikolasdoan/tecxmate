@@ -39,7 +39,7 @@ export function TeamSection() {
     },
     {
       name: "Edgar Effendi",
-      nameInChinese: "",
+      nameInChinese: "洪豪進",
       position: "System Architect",
       image: "/avatars/edgar_avatar.jpeg",
       regions: ["Taiwan", "Indonesia"],

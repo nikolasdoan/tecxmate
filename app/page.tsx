@@ -31,8 +31,6 @@ export default function Home() {
             <img src="/logos/harvard.png" alt="Harvard University" className="h-12 md:h-14 w-auto" />
             <img src="/logos/berkeley.png" alt="UC Berkeley" className="h-12 md:h-14 w-auto" />
             <img src="/logos/hku.png" alt="The University of Hong Kong" className="h-12 md:h-14 w-auto" />
-            <img src="/logos/healthmaxers.png" alt="Health Maxers" className="h-12 md:h-14 w-auto" />
-            <img src="/logos/ntu.png" alt="National Taiwan University" className="h-12 md:h-14 w-auto" />
             <img src="/logos/ntut.png" alt="National Taipei University of Technology" className="h-12 md:h-14 w-auto" />
           </InfiniteSlider>
         </div>
