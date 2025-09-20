@@ -21,7 +21,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-[#F6F3F1]/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-[#F6F3F1]/80 backdrop-blur-md relative">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl md:text-3xl font-bold tracking-tighter text-primary">TECXMATE</span>
@@ -84,10 +84,10 @@ export function Navbar() {
         <Button 
           variant="ghost" 
           size="icon" 
-          className="md:hidden fixed top-4 right-4 z-[60] bg-white/90 backdrop-blur-sm border border-border/40 shadow-lg" 
+          className="md:hidden absolute top-2 right-2 z-[60] bg-red-500 text-white shadow-lg rounded-lg" 
           onClick={toggleMenu}
         >
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           <span className="sr-only">Toggle menu</span>
         </Button>
       </div>
