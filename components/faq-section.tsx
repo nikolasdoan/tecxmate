@@ -47,7 +47,7 @@ export function FaqSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">FAQs</h2>
+          <h2 className="text-3xl font-mono font-normal md:text-4xl lg:text-5xl">FAQs</h2>
         </motion.div>
 
         <div className="mx-auto mt-12 max-w-3xl">

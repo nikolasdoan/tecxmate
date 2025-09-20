@@ -79,8 +79,8 @@ export function BlogSection() {
           viewport={{ once: true }}
         >
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Our Blog</div>
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">Latest Insights</h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
+          <h2 className="text-3xl font-mono font-normal md:text-4xl lg:text-5xl">Latest Insights</h2>
+          <p className="max-w-lg text-muted-foreground">
             Stay updated with the latest trends and insights in web development and design
           </p>
         </motion.div>

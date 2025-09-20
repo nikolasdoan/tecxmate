@@ -81,7 +81,7 @@ export function BentoServicesSection() {
       <div className="container relative z-10 px-4 md:px-6">
         {/* Header Section */}
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">Services</h2>
+          <h2 className="text-3xl font-mono font-normal md:text-4xl lg:text-5xl">Services</h2>
         </div>
 
         {/* Bento Grid Content */}

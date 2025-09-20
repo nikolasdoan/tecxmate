@@ -37,8 +37,8 @@ export default function Home() {
           </InfiniteSlider>
         </div>
       </section>
-      <BentoServicesSection />
       <DemoProductsSection />
+      <BentoServicesSection />
       <TeamSection />
       <TestimonialsSection />
       <FaqSection />

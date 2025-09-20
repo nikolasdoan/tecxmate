@@ -41,8 +41,8 @@ export function ProcessSection() {
     <section id="process" className="bg-[#F6F3F1] py-20 border-t border-b border-[rgba(55,50,47,0.12)]">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">How We Work</h2>
-          <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed">
+          <h2 className="text-3xl font-mono font-normal md:text-4xl lg:text-5xl">How We Work</h2>
+          <p className="max-w-lg text-muted-foreground">
             Our streamlined process ensures efficient delivery of high-quality results
           </p>
         </div>
