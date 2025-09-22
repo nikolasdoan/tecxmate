@@ -54,29 +54,6 @@ export function BentoServicesSection() {
 
   return (
     <section id="services" className="relative overflow-hidden bg-white py-16 md:py-20 snap-start border-t border-b border-[rgba(55,50,47,0.12)]">
-      {/* Gradient backgrounds */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/gradients/1.png" 
-          alt="Gradient background 1" 
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
-        />
-        <img 
-          src="/gradients/2.png" 
-          alt="Gradient background 2" 
-          className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-20"
-        />
-        <img 
-          src="/gradients/3.png" 
-          alt="Gradient background 3" 
-          className="absolute bottom-0 left-0 w-1/3 h-1/2 object-cover opacity-25"
-        />
-        <img 
-          src="/gradients/4.png" 
-          alt="Gradient background 4" 
-          className="absolute bottom-0 right-0 w-1/2 h-1/3 object-cover opacity-20"
-        />
-      </div>
       
       <div className="container relative z-10 px-4 md:px-6">
         {/* Header Section */}
