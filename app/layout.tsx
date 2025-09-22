@@ -7,9 +7,14 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Tecxmate - think, solve, & build",
-  description: "Empowering SMEs and Founders with premier technology consultancy and solutions",
-    generator: 'v0.dev'
+  title: "Tecxmate Corporation",
+  description: "Got an idea? Let us be your tecxmate!",
+    generator: 'v0.dev',
+  icons: {
+    icon: "/graphics/tecxmate-logo-cropped.svg",
+    shortcut: "/graphics/tecxmate-logo-cropped.svg",
+    apple: "/graphics/tecxmate-logo-cropped.svg",
+  },
 }
 
 export default function RootLayout({

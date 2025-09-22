@@ -18,9 +18,9 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <Link href="/" className="flex items-center gap-2">
-              <span className="font-semibold text-2xl md:text-3xl tracking-tight text-black">
-                <span className="font-light">tecx</span>
-                <span className="font-bold">mate</span>
+              <span className="font-semibold text-2xl md:text-3xl tracking-tight">
+                <span className="font-light text-black">tecx</span>
+                <span className="font-bold text-[#5b10fd]">mate</span>
               </span>
             </Link>
             <p className="text-lg text-gray-500">

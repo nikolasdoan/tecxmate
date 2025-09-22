@@ -114,8 +114,8 @@ export default function Header() {
     <header id="site-header" className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between p-4 transition-colors duration-300 ${containerClasses}`}>
       <div className="flex items-center">
         <Link href="/" className={`font-semibold text-lg md:text-xl tracking-tight ${forceTransparent ? "text-black" : isLightBehind ? "text-black" : "text-white"}`}>
-          <span className="font-light">tecx</span>
-          <span className="font-bold">mate</span>
+          <span className="font-light text-black">tecx</span>
+          <span className="font-bold text-[#5b10fd]">mate</span>
         </Link>
       </div>
 

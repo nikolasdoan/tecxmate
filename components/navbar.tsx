@@ -24,7 +24,10 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-[#F6F3F1]/80 backdrop-blur-md relative">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl md:text-3xl font-bold tracking-tighter text-primary">TECXMATE</span>
+          <span className="text-2xl md:text-3xl tracking-tight">
+            <span className="font-light text-black">tecx</span>
+            <span className="font-bold text-[#5b10fd]">mate</span>
+          </span>
         </Link>
         
         {/* Desktop Navigation */}
