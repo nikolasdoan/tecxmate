@@ -53,7 +53,7 @@ export function BentoServicesSection() {
   }
 
   return (
-    <section id="services" className="relative overflow-hidden bg-[#F6F3F1] py-16 md:py-20 snap-start border-t border-b border-[rgba(55,50,47,0.12)]">
+    <section id="services" className="relative overflow-hidden bg-white py-16 md:py-20 snap-start border-t border-b border-[rgba(55,50,47,0.12)]">
       {/* Gradient backgrounds */}
       <div className="absolute inset-0 z-0">
         <img 
