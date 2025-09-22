@@ -3,40 +3,10 @@
 import Link from "next/link"
 import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react"
 import { motion } from "framer-motion"
-import { Spotlight } from "@/components/spotlight"
-import { AnimatedDiagonalBackground } from "@/components/animated-diagonal-background"
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#F6F3F1] pt-12 md:pt-16 pb-6 snap-end">
-      {/* Spotlight effect */}
-      <Spotlight className="opacity-100" size={800} />
-
-      {/* Animated diagonal background */}
-      <AnimatedDiagonalBackground 
-        className="z-0 opacity-30" 
-        lineCount={200}
-        color="rgba(133, 82, 255, 0.08)"
-      />
-
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 z-0 opacity-20">
-        <svg
-          className="absolute inset-0 h-full w-full"
-          xmlns="http://www.w3.org/2000/svg"
-          width="100%"
-          height="100%"
-          viewBox="0 0 1000 1000"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(133, 82, 255, 0.1)" strokeWidth="1" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-      </div>
+    <footer className="relative bg-[#F6F3F1] pt-12 md:pt-16 pb-6 snap-end">
 
       <div className="container relative z-10 px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
