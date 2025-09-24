@@ -2,10 +2,12 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { Menu, X } from "lucide-react"
 
 export default function Header() {
   const [isLightBehind, setIsLightBehind] = useState(false)
   const [forceTransparent, setForceTransparent] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const getLuminance = (r: number, g: number, b: number) => {
@@ -119,7 +121,8 @@ export default function Header() {
         </Link>
       </div>
 
-      <nav className="flex items-center space-x-2">
+      {/* Desktop nav */}
+      <nav className="hidden md:flex items-center space-x-2">
         <Link
           href="/"
           className={`${linkClasses} text-sm font-light px-3 py-1.5 rounded-full transition-all duration-200`}
@@ -158,7 +161,8 @@ export default function Header() {
         </Link>
       </nav>
 
-      <div id="gooey-btn" className="relative flex items-center group" style={{ filter: "url(#gooey-filter)" }}>
+      {/* Desktop CTA */}
+      <div id="gooey-btn" className="hidden md:flex relative items-center group" style={{ filter: "url(#gooey-filter)" }}>
         <button className={`absolute right-0 px-2 py-1.5 rounded-full font-normal text-xs transition-all duration-300 cursor-pointer h-8 flex items-center justify-center -translate-x-9 group-hover:-translate-x-16 z-0 ${ctaClasses}`}>
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
@@ -168,6 +172,53 @@ export default function Header() {
           Get Started
         </button>
       </div>
+
+      {/* Mobile hamburger button */}
+      <button
+        aria-label="Open menu"
+        className={`md:hidden inline-flex items-center justify-center rounded-full p-2 ${forceTransparent ? "text-black" : isLightBehind ? "text-black" : "text-white"}`}
+        onClick={() => setIsMenuOpen((v) => !v)}
+      >
+        {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+      </button>
+
+      {/* Mobile slide-over menu */}
+      {isMenuOpen && (
+        <>
+          <div
+            className="fixed inset-0 z-40 bg-black/50 md:hidden"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <aside className="fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-2xl md:hidden transition-transform duration-300">
+            <div className="flex items-center justify-between p-4 border-b">
+              <span className="text-base font-semibold">Menu</span>
+              <button aria-label="Close menu" className="p-2" onClick={() => setIsMenuOpen(false)}>
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+            <nav className="flex flex-col p-4 gap-2">
+              <Link href="/" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+                Home
+              </Link>
+              <Link href="/#services" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+                Services
+              </Link>
+              <Link href="/#portfolio" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+                Products
+              </Link>
+              <Link href="/#team" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+                Team
+              </Link>
+              <Link href="/blog" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+                Blog
+              </Link>
+              <Link href="/contact" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </Link>
+            </nav>
+          </aside>
+        </>
+      )}
     </header>
   )
 }
