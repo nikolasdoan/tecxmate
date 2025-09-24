@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="relative bg-[#F6F3F1] pt-12 md:pt-16 pb-6 snap-end">
 
       <div className="container relative z-10 px-4 md:px-6">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <motion.div 
             className="space-y-4"
             initial={{ opacity: 0, y: 20 }}
@@ -48,37 +48,6 @@ export function Footer() {
                 <span className="sr-only">GitHub</span>
               </Link>
             </div>
-          </motion.div>
-          <motion.div 
-            className="space-y-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold tracking-tighter">Services</h3>
-            <ul className="space-y-2 text-sm text-gray-500">
-              <li>
-                <Link href="#services" className="hover:text-primary">
-                  Website Development
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="hover:text-primary">
-                  Mobile App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="hover:text-primary">
-                  Workflow Automation
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="hover:text-primary">
-                  Market Research & Consultancy
-                </Link>
-              </li>
-            </ul>
           </motion.div>
           <motion.div 
             className="space-y-4"
@@ -126,13 +95,11 @@ export function Footer() {
             <h3 className="text-2xl font-bold tracking-tighter">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-500">
               <li>
-                <a href="mailto:tecxmate@gmail.com" className="hover:text-primary">
-                  Email: tecxmate@gmail.com
+                <a href="mailto:hello@tecxmate.com" className="hover:text-primary">
+                  Email: hello@tecxmate.com
                 </a>
               </li>
-              <li>
-                <span>WhatsApp | Line | WeChat: nikolasdoan</span>
-              </li>
+              
               <li>
                 <a
                   href="https://cal.com/nikolasdoan/30min"
