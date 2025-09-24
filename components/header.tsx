@@ -9,6 +9,17 @@ export default function Header() {
   const [forceTransparent, setForceTransparent] = useState(true)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      const original = document.body.style.overflow
+      document.body.style.overflow = "hidden"
+      return () => {
+        document.body.style.overflow = original
+      }
+    }
+  }, [isMenuOpen])
+
   useEffect(() => {
     const getLuminance = (r: number, g: number, b: number) => {
       const srgb = [r, g, b].map((v) => {
@@ -182,43 +193,52 @@ export default function Header() {
         {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
 
-      {/* Mobile slide-over menu */}
-      {isMenuOpen && (
-        <>
-          <div
-            className="fixed inset-0 z-40 bg-black/50 md:hidden"
-            onClick={() => setIsMenuOpen(false)}
-          />
-          <aside className="fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-2xl md:hidden transition-transform duration-300">
-            <div className="flex items-center justify-between p-4 border-b">
-              <span className="text-base font-semibold">Menu</span>
-              <button aria-label="Close menu" className="p-2" onClick={() => setIsMenuOpen(false)}>
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-            <nav className="flex flex-col p-4 gap-2">
-              <Link href="/" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
-                Home
-              </Link>
-              <Link href="/#services" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
-                Services
-              </Link>
-              <Link href="/#portfolio" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
-                Products
-              </Link>
-              <Link href="/#team" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
-                Team
-              </Link>
-              <Link href="/blog" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
-                Blog
-              </Link>
-              <Link href="/contact" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
-                Contact
-              </Link>
-            </nav>
-          </aside>
-        </>
-      )}
+      {/* Mobile slide-over menu (always mounted for smooth transitions) */}
+      <div className="md:hidden">
+        {/* Backdrop */}
+        <div
+          aria-hidden
+          className={`fixed inset-0 z-[110] bg-black/50 transition-opacity duration-300 ${
+            isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
+          onClick={() => setIsMenuOpen(false)}
+        />
+
+        {/* Panel */}
+        <aside
+          className={`fixed top-0 right-0 z-[120] h-[100dvh] w-80 max-w-[85vw] bg-white shadow-2xl transition-transform duration-300 will-change-transform ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+          style={{ paddingTop: "env(safe-area-inset-top)" }}
+        >
+          <div className="flex items-center justify-between p-4 border-b">
+            <span className="text-base font-semibold">Menu</span>
+            <button aria-label="Close menu" className="p-2" onClick={() => setIsMenuOpen(false)}>
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+          <nav className="flex flex-col p-4 gap-2">
+            <Link href="/" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+              Home
+            </Link>
+            <Link href="/#services" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+              Services
+            </Link>
+            <Link href="/#portfolio" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+              Products
+            </Link>
+            <Link href="/#team" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+              Team
+            </Link>
+            <Link href="/blog" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+              Blog
+            </Link>
+            <Link href="/contact" className="py-3 px-3 rounded-lg hover:bg-black/5" onClick={() => setIsMenuOpen(false)}>
+              Contact
+            </Link>
+          </nav>
+        </aside>
+      </div>
     </header>
   )
 }
