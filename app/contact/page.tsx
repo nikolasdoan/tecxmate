@@ -27,11 +27,11 @@ export default function ContactPage() {
                   <h2 className="mb-6 text-2xl font-bold">Email Us</h2>
                   <div className="space-y-4">
                     <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
-                      <a href="mailto:tecxmate@gmail.com">
+                      <a href="mailto:hello@tecxmate.com">
                         <Mail className="h-5 w-5 text-primary" />
                         <div>
                           <div className="font-medium">General Inquiries</div>
-                          <div className="text-sm text-gray-500">tecxmate@gmail.com</div>
+                          <div className="text-sm text-gray-500">hello@tecxmate.com</div>
                         </div>
                       </a>
                     </Button>
@@ -41,35 +41,7 @@ export default function ContactPage() {
                 <div className="rounded-lg bg-white p-8 shadow-md">
                   <h2 className="mb-6 text-2xl font-bold">Chat With Us</h2>
                   <div className="space-y-4">
-                    <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
-                      <a href="https://wa.me/nikolasdoan" target="_blank" rel="noopener noreferrer">
-                        <MessageCircle className="h-5 w-5 text-green-500" />
-                        <div>
-                          <div className="font-medium">WhatsApp</div>
-                          <div className="text-sm text-gray-500">nikolasdoan</div>
-                        </div>
-                      </a>
-                    </Button>
-
-                    <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
-                      <a href="https://line.me/ti/p/nikolasdoan" target="_blank" rel="noopener noreferrer">
-                        <MessageCircle className="h-5 w-5 text-green-600" />
-                        <div>
-                          <div className="font-medium">Line</div>
-                          <div className="text-sm text-gray-500">nikolasdoan</div>
-                        </div>
-                      </a>
-                    </Button>
-
-                    <Button variant="outline" className="w-full justify-start gap-3 text-left" asChild>
-                      <a href="weixin://dl/chat?nikolasdoan" target="_blank" rel="noopener noreferrer">
-                        <MessageCircle className="h-5 w-5 text-green-700" />
-                        <div>
-                          <div className="font-medium">WeChat</div>
-                          <div className="text-sm text-gray-500">nikolasdoan</div>
-                        </div>
-                      </a>
-                    </Button>
+                    <p className="text-gray-600 text-sm">Use the email above or book a call below.</p>
                   </div>
                 </div>
               </div>
