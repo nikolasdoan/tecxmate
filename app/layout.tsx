@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   description: "Got an idea? Let us be your tecxmate!",
     generator: 'v0.dev',
   icons: {
-    icon: "/graphics/tecxmate-logo-cropped.svg",
-    shortcut: "/graphics/tecxmate-logo-cropped.svg",
-    apple: "/graphics/tecxmate-logo-cropped.svg",
+    icon: "/placeholder-logo.png",
+    shortcut: "/placeholder-logo.png",
+    apple: "/placeholder-logo.png",
   },
 }
 
