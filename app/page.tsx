@@ -9,7 +9,6 @@ import { TeamSection } from "@/components/team-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { ValuesSection } from "@/components/values-section"
 import { DemoProductsSection } from "@/components/demo-products-section"
-import { FaqSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -39,7 +38,6 @@ export default function Home() {
       <BentoServicesSection />
       <TeamSection />
       <TestimonialsSection />
-      <FaqSection />
       <Footer />
     </main>
   )
