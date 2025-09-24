@@ -1,7 +1,6 @@
 import ShaderBackground from "@/components/shader-background"
 import Header from "@/components/header"
 import HeroContent from "@/components/hero-content"
-import PulsingCircle from "@/components/pulsing-circle"
 import { InfiniteSlider } from "@/components/ui/infinite-slider"
 import { BentoServicesSection } from "@/components/bento-services-section"
 import { ProcessSection } from "@/components/process-section"
@@ -17,7 +16,6 @@ export default function Home() {
       <Header />
       <ShaderBackground>
         <HeroContent />
-        <PulsingCircle />
       </ShaderBackground>
       {/* Trusted by clients slider */}
       <section className="snap-start bg-white py-6 md:py-8">
