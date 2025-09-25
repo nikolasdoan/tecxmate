@@ -125,6 +125,7 @@ export default function Header() {
 
   return (
     <header id="site-header" className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between p-4 transition-colors duration-300 ${containerClasses}`}>
+      {/* Logo - always on left */}
       <div className="flex items-center">
         <Link href="/" className={`font-semibold text-lg md:text-xl tracking-tight ${forceTransparent ? "text-black" : isLightBehind ? "text-black" : "text-white"}`}>
           <span className="font-light text-black">tecx</span>
@@ -132,8 +133,8 @@ export default function Header() {
         </Link>
       </div>
 
-      {/* Desktop nav */}
-      <nav className="hidden md:flex items-center space-x-2">
+      {/* Desktop nav (centered on md+) */}
+      <nav className="hidden md:flex items-center space-x-2 mx-auto">
         <Link
           href="/"
           className={`${linkClasses} text-sm font-light px-3 py-1.5 rounded-full transition-all duration-200`}
@@ -172,26 +173,29 @@ export default function Header() {
         </Link>
       </nav>
 
-      {/* Desktop CTA */}
-      <div id="gooey-btn" className="hidden md:flex relative items-center group" style={{ filter: "url(#gooey-filter)" }}>
-        <button className={`absolute right-0 px-2 py-1.5 rounded-full font-normal text-xs transition-all duration-300 cursor-pointer h-8 flex items-center justify-center -translate-x-9 group-hover:-translate-x-16 z-0 ${ctaClasses}`}>
-          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-          </svg>
-        </button>
-        <button className={`px-5 py-1.5 rounded-full font-normal text-xs transition-all duration-300 cursor-pointer h-8 flex items-center z-10 ${ctaClasses}`}>
-          Get Started
+      {/* Right side - Desktop CTA + Mobile hamburger */}
+      <div className="flex items-center gap-2">
+        {/* Desktop CTA */}
+        <div id="gooey-btn" className="hidden md:flex relative items-center group" style={{ filter: "url(#gooey-filter)" }}>
+          <button className={`absolute right-0 px-2 py-1.5 rounded-full font-normal text-xs transition-all duration-300 cursor-pointer h-8 flex items-center justify-center -translate-x-9 group-hover:-translate-x-16 z-0 ${ctaClasses}`}>
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </button>
+          <button className={`px-5 py-1.5 rounded-full font-normal text-xs transition-all duration-300 cursor-pointer h-8 flex items-center z-10 ${ctaClasses}`}>
+            Get Started
+          </button>
+        </div>
+
+        {/* Mobile hamburger button - always on far right */}
+        <button
+          aria-label="Open menu"
+          className={`md:hidden inline-flex items-center justify-center rounded-full p-2 ${forceTransparent ? "text-black" : isLightBehind ? "text-black" : "text-white"}`}
+          onClick={() => setIsMenuOpen((v) => !v)}
+        >
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
-
-      {/* Mobile hamburger button */}
-      <button
-        aria-label="Open menu"
-        className={`md:hidden inline-flex items-center justify-center rounded-full p-2 ${forceTransparent ? "text-black" : isLightBehind ? "text-black" : "text-white"}`}
-        onClick={() => setIsMenuOpen((v) => !v)}
-      >
-        {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-      </button>
 
       {/* Mobile slide-over menu (always mounted for smooth transitions) */}
       <div className="md:hidden">
