@@ -66,18 +66,20 @@ const data = [
 
 const Gallery4 = ({
   title = "Case Studies",
-  description = "Discover how leading companies and developers are leveraging modern web technologies to build exceptional digital experiences. These case studies showcase real-world applications and success stories.",
+  description = "",
   items = data,
 }: Gallery4Props) => {
 
   return (
     <section className="py-32">
       <div className="container px-4 md:px-6">
-        <div className="mb-8 flex flex-col gap-4 md:mb-14 lg:mb-16">
+        <div className="mb-8 flex flex-col items-center text-center gap-4 md:mb-14 lg:mb-16">
           <h2 className="text-3xl font-mono font-normal md:text-4xl lg:text-5xl">
             {title}
           </h2>
-          <p className="max-w-lg text-muted-foreground">{description}</p>
+          {description && (
+            <p className="max-w-lg text-muted-foreground">{description}</p>
+          )}
         </div>
       </div>
       <div className="w-full overflow-x-auto overflow-y-hidden scrollbar-hide">
@@ -85,10 +87,10 @@ const Gallery4 = ({
           {items.map((item) => (
             <div
               key={item.id}
-              className="flex-shrink-0 w-80 lg:w-96"
+              className="flex-shrink-0 w-72 lg:w-80"
             >
               <a href={item.href} className="group rounded-xl block">
-                <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
+                <div className="group relative h-full min-h-[22rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
                   <img
                     src={item.image}
                     alt={item.title}

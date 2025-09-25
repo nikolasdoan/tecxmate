@@ -44,7 +44,8 @@ export function DemoProductsSection() {
   return (
     <Gallery4
       title="Products"
-      description="Explore our portfolio of successful projects and see how we've helped businesses achieve their goals with cutting-edge technology solutions."
+      // Remove subtitle per request
+      description={undefined}
       items={products}
     />
   )

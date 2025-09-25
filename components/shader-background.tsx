@@ -47,7 +47,7 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
     <div 
       id="hero" 
       ref={containerRef} 
-      className="min-h-[64vh] bg-white relative overflow-hidden pt-20 snap-start"
+      className="min-h-[100dvh] bg-white relative overflow-hidden pt-20 snap-start"
       style={{
         transform: 'translateZ(0)', // Force hardware acceleration
         willChange: 'transform',

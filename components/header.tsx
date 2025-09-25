@@ -12,10 +12,13 @@ export default function Header() {
   // Lock body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      const original = document.body.style.overflow
+      const originalOverflow = document.body.style.overflow
+      const originalHtmlOverflowX = document.documentElement.style.overflowX
       document.body.style.overflow = "hidden"
+      document.documentElement.style.overflowX = "hidden"
       return () => {
-        document.body.style.overflow = original
+        document.body.style.overflow = originalOverflow
+        document.documentElement.style.overflowX = originalHtmlOverflowX
       }
     }
   }, [isMenuOpen])
@@ -211,8 +214,8 @@ export default function Header() {
 
         {/* Panel */}
         <aside
-          className={`fixed top-0 right-0 z-[120] h-[100dvh] w-80 max-w-[85vw] bg-white shadow-2xl transition-transform duration-300 will-change-transform ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 left-0 z-[120] h-[100dvh] w-80 max-w-[85vw] bg-white/80 backdrop-blur-md shadow-2xl transition-transform duration-300 will-change-transform ${
+            isMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           style={{ paddingTop: "env(safe-area-inset-top)" }}
         >

@@ -16,22 +16,34 @@ export default function Home() {
       <Header />
       <ShaderBackground>
         <HeroContent />
-      </ShaderBackground>
-      {/* Trusted by clients slider */}
-      <section className="snap-start bg-white py-6 md:py-8">
-        <div className="container px-4 md:px-6">
-          <p className="mb-4 text-center text-xs md:text-sm font-mono font-semibold text-black/70">
-            with clients from
-          </p>
-          <InfiniteSlider className="opacity-80" direction="horizontal" duration={40} gap={56}>
-            <img src="/logos/healthmaxers.png" alt="Health Maxers" className="h-12 md:h-14 w-auto" />
-            <img src="/logos/harvard.png" alt="Harvard University" className="h-12 md:h-14 w-auto" />
-            <img src="/logos/hku.png" alt="The University of Hong Kong" className="h-12 md:h-14 w-auto" />
-            <img src="/logos/ntut.png" alt="National Taipei University of Technology" className="h-12 md:h-14 w-auto" />
-            <img src="/logos/ntust-logo-transparent.png" alt="National Taiwan University of Science and Technology" className="h-12 md:h-14 w-auto" />
-          </InfiniteSlider>
+        {/* Overlayed carousel at bottom of hero */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-8 md:bottom-12">
+          <div className="container px-4 md:px-6">
+            <p className="mb-3 text-center text-[10px] md:text-xs font-mono font-semibold text-black/70">
+              with clients from
+            </p>
+            <div className="pointer-events-auto">
+              <InfiniteSlider className="opacity-80" direction="horizontal" duration={40} gap={56}>
+                <img src="/logos/healthmaxers.png" alt="Health Maxers" className="h-10 md:h-12 w-auto" />
+                <img src="/logos/harvard.png" alt="Harvard University" className="h-10 md:h-12 w-auto" />
+                <img src="/logos/hku.png" alt="The University of Hong Kong" className="h-10 md:h-12 w-auto" />
+                <img src="/logos/ntut.png" alt="National Taipei University of Technology" className="h-10 md:h-12 w-auto" />
+                <img src="/logos/crypted.png" alt="Crypted" className="h-10 md:h-12 w-auto" />
+                <img src="/logos/ntust-logo-transparent.png" alt="National Taiwan University of Science and Technology" className="h-10 md:h-12 w-auto" />
+              </InfiniteSlider>
+            </div>
+            {/* CTAs moved below the carousel */}
+            <div className="mt-4 flex items-center justify-start gap-4">
+              <a href="https://cal.com/nikolasdoan/30min" target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full bg-black text-white font-normal text-xs transition-all duration-200 hover:bg-black/90 cursor-pointer">
+                Book a Call
+              </a>
+              <a href="/#services" className="px-8 py-3 rounded-full bg-transparent border border-black/20 text-black font-normal text-xs transition-all duration-200 hover:bg-black/5 hover:border-black/30 cursor-pointer">
+                Our Services
+              </a>
+            </div>
+          </div>
         </div>
-      </section>
+      </ShaderBackground>
       <DemoProductsSection />
       <BentoServicesSection />
       <TeamSection />
