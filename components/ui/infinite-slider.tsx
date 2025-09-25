@@ -1,8 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { useMotionValue, animate, motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import useMeasure from 'react-use-measure';
+import { useState, useEffect, useRef } from 'react';
 
 type InfiniteSliderProps = {
   children: React.ReactNode;
@@ -24,10 +23,34 @@ export function InfiniteSlider({
   className,
 }: InfiniteSliderProps) {
   const [currentDuration, setCurrentDuration] = useState(duration);
-  const [ref, { width, height }] = useMeasure();
+  const ref = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
   const translation = useMotionValue(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [key, setKey] = useState(0);
+
+  // Measure dimensions
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        setWidth(rect.width);
+        setHeight(rect.height);
+      }
+    };
+
+    updateDimensions();
+    
+    const resizeObserver = new ResizeObserver(updateDimensions);
+    if (ref.current) {
+      resizeObserver.observe(ref.current);
+    }
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     let controls;

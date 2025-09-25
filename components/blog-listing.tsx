@@ -45,7 +45,7 @@ export function BlogListing() {
       date: "January 1, 2023",
       readTime: "5 min read",
       category: "Design",
-      coverImage: "/placeholder.svg?height=200&width=400",
+      coverImage: "/placeholder.svg",
     },
     {
       id: "placeholder-2",
@@ -55,7 +55,7 @@ export function BlogListing() {
       date: "January 1, 2023",
       readTime: "7 min read",
       category: "Performance",
-      coverImage: "/placeholder.svg?height=200&width=400",
+      coverImage: "/placeholder.svg",
     },
     {
       id: "placeholder-3",
@@ -65,7 +65,7 @@ export function BlogListing() {
       date: "January 1, 2023",
       readTime: "6 min read",
       category: "Design",
-      coverImage: "/placeholder.svg?height=200&width=400",
+      coverImage: "/placeholder.svg",
     },
     {
       id: "placeholder-4",
@@ -75,7 +75,7 @@ export function BlogListing() {
       date: "January 1, 2023",
       readTime: "8 min read",
       category: "SEO",
-      coverImage: "/placeholder.svg?height=200&width=400",
+      coverImage: "/placeholder.svg",
     },
     {
       id: "placeholder-5",
@@ -85,7 +85,7 @@ export function BlogListing() {
       date: "January 1, 2023",
       readTime: "9 min read",
       category: "Development",
-      coverImage: "/placeholder.svg?height=200&width=400",
+      coverImage: "/placeholder.svg",
     },
     {
       id: "placeholder-6",
@@ -95,7 +95,7 @@ export function BlogListing() {
       date: "January 1, 2023",
       readTime: "7 min read",
       category: "Accessibility",
-      coverImage: "/placeholder.svg?height=200&width=400",
+      coverImage: "/placeholder.svg",
     },
   ]
 
@@ -170,7 +170,7 @@ export function BlogListing() {
                       <Link href={`/blog/${post.slug}`} className="group flex gap-3">
                         <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md">
                           <img
-                            src={post.coverImage || "/placeholder.svg?height=50&width=50"}
+                            src={post.coverImage || "/placeholder.svg"}
                             alt={post.title}
                             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                           />
@@ -196,7 +196,7 @@ export function BlogListing() {
                 >
                   <div className="aspect-video w-full overflow-hidden">
                     <img
-                      src={post.coverImage || "/placeholder.svg?height=200&width=400"}
+                      src={post.coverImage || "/placeholder.svg"}
                       alt={post.title}
                       className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                     />

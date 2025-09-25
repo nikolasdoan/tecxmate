@@ -55,5 +55,21 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Android Chromium optimizations */
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Smooth scrolling for Android */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Hardware acceleration for scroll containers */
+  .snap-y {
+    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
   }
 }

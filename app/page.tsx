@@ -24,11 +24,11 @@ export default function Home() {
             with clients from
           </p>
           <InfiniteSlider className="opacity-80" direction="horizontal" duration={40} gap={56}>
-            <img src="/logos/cornell.png" alt="Cornell University" className="h-12 md:h-14 w-auto" />
+            <img src="/logos/healthmaxers.png" alt="Health Maxers" className="h-12 md:h-14 w-auto" />
             <img src="/logos/harvard.png" alt="Harvard University" className="h-12 md:h-14 w-auto" />
-            <img src="/logos/berkeley.png" alt="UC Berkeley" className="h-12 md:h-14 w-auto" />
             <img src="/logos/hku.png" alt="The University of Hong Kong" className="h-12 md:h-14 w-auto" />
             <img src="/logos/ntut.png" alt="National Taipei University of Technology" className="h-12 md:h-14 w-auto" />
+            <img src="/logos/ntust-logo-transparent.png" alt="National Taiwan University of Science and Technology" className="h-12 md:h-14 w-auto" />
           </InfiniteSlider>
         </div>
       </section>

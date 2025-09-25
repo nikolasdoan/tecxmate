@@ -25,25 +25,25 @@ const experts: Expert[] = [
     name: "Nikolas Doan",
     role: "Co-founder & CEO",
     expertise: ["Business Strategy", "Education", "Market Research"],
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/placeholder-user.svg",
   },
   {
     name: "Brian Nguyen",
     role: "Founder & CTO",
     expertise: ["Technical Architecture", "Software Development", "Digital Solutions"],
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/placeholder-user.svg",
   },
   {
     name: "Jane Liu",
     role: "Head of Design",
     expertise: ["UI/UX Design", "Brand Identity", "User Experience"],
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/placeholder-user.svg",
   },
   {
     name: "Edgar Edffedi",
     role: "Head of Media",
     expertise: ["Content Strategy", "Digital Marketing", "Media Production"],
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/placeholder-user.svg",
   },
 ]
 
@@ -329,7 +329,7 @@ export function ComprehensiveOnboardingForm({ onClose }: ComprehensiveOnboarding
     {
       id: "business-homepage",
       name: "Business Homepage",
-      image: "/placeholder.svg?height=120&width=200&text=Business+Homepage",
+      image: "/placeholder.svg",
     },
     {
       id: "personal-portfolio",
@@ -890,7 +890,7 @@ export function ComprehensiveOnboardingForm({ onClose }: ComprehensiveOnboarding
         <div className="flex items-center gap-4">
           <div className="h-16 w-16 overflow-hidden rounded-full">
             <img
-              src={matchedExpert?.image || "/placeholder.svg"}
+                src={matchedExpert?.image || "/placeholder-user.svg"}
               alt={matchedExpert?.name}
               className="h-full w-full object-cover"
             />

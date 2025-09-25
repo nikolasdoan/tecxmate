@@ -2,16 +2,19 @@
 
 export default function HeroContent() {
   return (
-    <main className="absolute bottom-8 left-4 right-4 md:left-8 md:right-auto z-20 max-w-lg">
+    <main 
+      className="absolute bottom-8 left-4 right-4 md:left-8 md:right-auto z-20 max-w-lg"
+      style={{
+        transform: 'translateZ(0)', // Hardware acceleration
+        willChange: 'transform'
+      }}
+    >
       <div className="text-left">
 
         <h1 className="text-5xl md:text-6xl md:leading-16 tracking-tight text-black mb-4 flex items-center md:whitespace-nowrap">
           <span className="font-mono font-normal">Build the future</span>
         </h1>
 
-        <p className="text-base md:text-lg font-light text-black/70 mb-6 leading-relaxed">
-          We help you craft digital products with premier technology consultancy and solutions. Let us be your tecxmate!
-        </p>
 
         <div className="flex items-center gap-4 flex-wrap">
           <a href="/#services" className="px-8 py-3 rounded-full bg-transparent border border-black/20 text-black font-normal text-xs transition-all duration-200 hover:bg-black/5 hover:border-black/30 cursor-pointer">

@@ -15,7 +15,7 @@ export function TestimonialsSection() {
       author: "Shawn",
       position: "Founder",
       company: "SparkLift Inc., NYC, USA",
-      avatar: "/placeholder.svg?height=50&width=50",
+      avatar: "/placeholder-user.svg",
     },
     {
       quote:
@@ -23,7 +23,7 @@ export function TestimonialsSection() {
       author: "Paolo",
       position: "",
       company: "Harvard Kennedy School, Boston, USA",
-      avatar: "/placeholder.svg?height=50&width=50",
+      avatar: "/placeholder-user.svg",
     },
     {
       quote:
@@ -31,7 +31,7 @@ export function TestimonialsSection() {
       author: "Jesse",
       position: "",
       company: "ClassZ Ltd., Hong Kong",
-      avatar: "/placeholder.svg?height=50&width=50",
+      avatar: "/placeholder-user.svg",
     },
     {
       quote:
@@ -39,7 +39,7 @@ export function TestimonialsSection() {
       author: "ChiChi",
       position: "",
       company: "Vietnamese Education, Vietnam",
-      avatar: "/placeholder.svg?height=50&width=50",
+      avatar: "/placeholder-user.svg",
     },
   ]
 
@@ -78,7 +78,7 @@ export function TestimonialsSection() {
                     <div className="flex items-center gap-4">
                       <Avatar className="h-12 w-12 border-2 border-primary/10">
                         <AvatarImage
-                          src={testimonials[current].avatar || "/placeholder.svg"}
+                          src={testimonials[current].avatar || "/placeholder-user.svg"}
                           alt={testimonials[current].author}
                         />
                         <AvatarFallback className="bg-primary/10 text-primary">

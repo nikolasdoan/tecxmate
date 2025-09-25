@@ -116,7 +116,7 @@ export function TeamSection() {
                 <CardContent className="p-0">
                   <div className="relative">
                     <img
-                      src={member.image || "/placeholder.svg"}
+                      src={member.image || "/placeholder-user.svg"}
                       alt={member.name}
                       className="aspect-square w-full object-cover"
                     />

@@ -72,7 +72,7 @@ export function BlogPostContent({ slug }: BlogPostContentProps) {
       <div className="relative aspect-video w-full overflow-hidden">
         <div className="absolute inset-0 bg-black/40" />
         <img
-          src={post.coverImage || "/placeholder.svg?height=600&width=1200"}
+            src={post.coverImage || "/placeholder.svg"}
           alt={post.title}
           className="h-full w-full object-cover"
         />
